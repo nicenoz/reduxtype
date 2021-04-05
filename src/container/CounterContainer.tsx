@@ -1,7 +1,13 @@
 import { connect } from "react-redux";
 import Counter from '../component/Counter';
 import { increase, decrease } from "../modules/counter";
-export const counterContainer = (props: { number: number, increase: any, decrease: any}) : JSX.Element=>{
+
+type objType = {
+    counter: {
+        number: number
+    },
+}
+export const counterContainer = (props: { number: number, increase: object, decrease: object}) : JSX.Element=>{
     return (
         <>
             <Counter number={props.number} onIncrease={props.increase} onDecrease={props.decrease} />
@@ -9,7 +15,7 @@ export const counterContainer = (props: { number: number, increase: any, decreas
     )
 }
 
-const mapStateToProps = (state:any) => ({
+const mapStateToProps = ( state:objType) => ({
     number: state.counter.number
 })
 
