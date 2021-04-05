@@ -1,3 +1,4 @@
+import { MouseEventHandler } from "react";
 import { connect } from "react-redux";
 import Counter from '../component/Counter';
 import { increase, decrease } from "../modules/counter";
@@ -7,7 +8,7 @@ type objType = {
         number: number
     },
 }
-export const counterContainer = (props: { number: number, increase: object, decrease: object}) : JSX.Element=>{
+export const counterContainer = (props: { number: number, increase: MouseEventHandler<HTMLButtonElement>, decrease: MouseEventHandler<HTMLButtonElement>}) : JSX.Element=>{
     return (
         <>
             <Counter number={props.number} onIncrease={props.increase} onDecrease={props.decrease} />
