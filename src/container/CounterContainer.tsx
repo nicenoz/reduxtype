@@ -12,7 +12,7 @@ export const counterContainer = (props: { number: number, increase: MouseEventHa
     )
 }
 
-const mapStateToProps = ( state: myNamespace.objType ) => ({
+const mapStateToProps = (state: myNamespace.objType) => ({
     number: state.counter.number
 })
 
