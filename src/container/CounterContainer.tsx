@@ -2,12 +2,8 @@ import { MouseEventHandler } from "react";
 import { connect } from "react-redux";
 import Counter from '../component/Counter';
 import { increase, decrease } from "../modules/counter";
+import { myNamespace } from 'myModule';
 
-type objType = {
-    counter: {
-        number: number
-    },
-}
 export const counterContainer = (props: { number: number, increase: MouseEventHandler<HTMLButtonElement>, decrease: MouseEventHandler<HTMLButtonElement>}) : JSX.Element=>{
     return (
         <>
@@ -16,7 +12,7 @@ export const counterContainer = (props: { number: number, increase: MouseEventHa
     )
 }
 
-const mapStateToProps = ( state:objType) => ({
+const mapStateToProps = ( state:myNamespace.objType) => ({
     number: state.counter.number
 })
 
