@@ -1,6 +1,6 @@
 // /src/@types/types.d.ts
 declare module 'myModule' {
-    export namespace myNamespace {
+    export declare namespace myModule {
         type Foo = string;
         interface Bar {
             baz: number
@@ -12,5 +12,4 @@ declare module 'myModule' {
             },
         }
     }
-
 }
