@@ -1,13 +1,15 @@
+import { myModule } from 'myModule';
+
 export const INCREASE: string = "counter/INCREASE";
 export const DECREASE: string = "counter/DECREASE";
 
-export const increase = () : object => ({ type: INCREASE});
-export const decrease = () : object => ({ type: DECREASE});
+export const increase = () : myModule.actionType => ({ type: INCREASE});
+export const decrease = () : myModule.actionType => ({ type: DECREASE});
 
-type actionType = {type: string};
-type initialType = {number: number, age: number};
-export const initialState = { number: 0, age: 1};
-export default function counter(state:initialType = initialState, action: actionType){
+
+
+export const initialState:myModule.initialType = { number: 0, age: 1};
+export default function counter(state:myModule.initialType = initialState, action: myModule.actionType){
 
     switch(action.type){
         case INCREASE:

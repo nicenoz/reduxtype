@@ -11,5 +11,8 @@ declare module 'myModule' {
                 number: number
             },
         }
+
+        type actionType = {type: string};
+        type initialType = {number: number, age: number};
     }
 }
