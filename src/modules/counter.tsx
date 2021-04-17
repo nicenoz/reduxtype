@@ -6,8 +6,6 @@ export const DECREASE: string = "counter/DECREASE";
 export const increase = () : myModule.actionType => ({ type: INCREASE});
 export const decrease = () : myModule.actionType => ({ type: DECREASE});
 
-
-
 export const initialState:myModule.initialType = { number: 0, age: 1};
 export default function counter(state:myModule.initialType = initialState, action: myModule.actionType){
 
